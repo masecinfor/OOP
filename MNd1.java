@@ -37,35 +37,35 @@ public class d1 {
                     kh.inKH();
                     break;
                 case 6:
-                KhachHang tmp2 = new KhachHang();
-                int tmp3 = 0;
-                System.out.print("---Nhap maKH:");
-                tmp2.maKH = input.nextLine();
-                tmp2.gia = 0;
-                for(int i=0; i<kh.listKH.size(); i++) {
-                    if(kh.listKH.get(i).maKH.equals(tmp2.maKH)) {
-                        do{
-                            System.out.print("---Nhap maSP:");
-                            tmp2.maSP = input.nextLine();
-                            for(int j=0; j<st.listSP.size(); j++) {
-                                if(st.listSP.get(j).maSP.equals(tmp2.maSP)) {
-                                    System.out.print("---Nhap so luong:");
-                                    tmp2.soLuong = input.nextInt();
-                                    st.listSP.get(j).soLuong -= tmp2.soLuong;
-                                    tmp2.gia += tmp2.soLuong*st.listSP.get(j).gia;
-                                    System.out.println("====> Nhap thanh cong");
-                                    break;
+                    KhachHang tmp2 = new KhachHang();
+                    int tmp3 = 0;
+                    System.out.print("---Nhap maKH:");
+                    tmp2.maKH = input.nextLine();
+                    tmp2.gia = 0;
+                    for(int i=0; i<kh.listKH.size(); i++) {
+                        if(kh.listKH.get(i).maKH.equals(tmp2.maKH)) {
+                            do{
+                                System.out.print("---Nhap maSP:");
+                                tmp2.maSP = input.nextLine();
+                                for(int j=0; j<st.listSP.size(); j++) {
+                                    if(st.listSP.get(j).maSP.equals(tmp2.maSP)) {
+                                        System.out.print("---Nhap so luong:");
+                                        tmp2.soLuong = input.nextInt();
+                                        st.listSP.get(j).soLuong -= tmp2.soLuong;
+                                        tmp2.gia += tmp2.soLuong*st.listSP.get(j).gia;
+                                        System.out.println("====> Nhap thanh cong");
+                                        break;
+                                    }
                                 }
-                            }
-                            System.out.print("Nhap them san pham(0/1):");
-                            tmp3 = input.nextInt();
-                            input.nextLine();
-                        } while(tmp3 == 1);
-                        hd.listHD.add(tmp2);
-                        break;
+                                System.out.print("Nhap them san pham(0/1):");
+                                tmp3 = input.nextInt();
+                                input.nextLine();
+                            } while(tmp3 == 1);
+                            hd.listHD.add(tmp2);
+                            break;
+                        }
                     }
-                }
-                System.out.println("--->Khong tim thay maKH");
+                    System.out.println("--->Khong tim thay maKH");
                     break;
                 case 7:
                     hd.inHD();
